@@ -2,7 +2,7 @@ name: Auto Run Daily
 
 on:
   schedule:
-    - cron: '00 21 * * *'  
+    - cron: '30 21 * * *'  
   workflow_dispatch:
     branches:
       - main  # manual triggering
