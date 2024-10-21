@@ -8,6 +8,7 @@ import ballerina/io;
 final jdbc:Client dbClient = check new (url = "jdbc:h2:file:./database/loandatabase", user = "test", password = "test");
 
 public function main() returns error? {
+    
     check initDB();
     [LoanRequest[], LoanApproval[]] extractedData = check extract();
     [Loan[], BranchPerformance[], RegionPerformance[]] transformResult = transform(extractedData[0], extractedData[1]);
