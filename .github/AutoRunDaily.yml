@@ -1,8 +1,8 @@
-name: Ballerina Auto Run Daily
+name: Ballerina Run Daily 
 
 on:
   schedule:
-    - cron: '0 20 * * *'  
+    - cron: '30 19 * * *'  # This corresponds to 1 AM in GMT+5:30 timezone
   workflow_dispatch:
     branches:
       - main  # manual triggering
